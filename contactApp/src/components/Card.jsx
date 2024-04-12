@@ -1,7 +1,6 @@
 import React from "react";
 import Avatar from "./Avatar";
-import ContactInfo from "./ContactInfo";
-import EmailInfo from "./EmailInfo";
+import DetailInfo from "./DetailInfo";
 
 function Card(props) {
   return (
@@ -10,8 +9,8 @@ function Card(props) {
       <div className="mt-1 md:flex ">
         <div className="mr-5 p-2 ">
           <Avatar imageUrl={props.imageUrl} />
-          <EmailInfo email={props.email} />
-          <ContactInfo phone={props.phone} />
+          <DetailInfo type="phone" info={props.phone} />
+          <DetailInfo type="email" info={props.email} />
         </div>
         <div>
           <p className="text-justify">{props.about}</p>
